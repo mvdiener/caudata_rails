@@ -26,7 +26,7 @@ gem 'spring',        group: :development
 
 # Use mongodb for database
 gem 'mongoid', '~> 4.0.0'
-gem 'bson_ext'
+gem 'mongo'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
