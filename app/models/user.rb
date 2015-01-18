@@ -1,3 +1,5 @@
+require 'bcrypt'
+
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -13,6 +15,13 @@ class User
   validates_format_of :email, with: VALID_EMAIL_REGEX
   validates_uniqueness_of :email
 
-  has_secure_password
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
 
 end
