@@ -21,3 +21,4 @@
 # Ignore local database files
 /db
 /db/journal
+/db/journal/j._0
