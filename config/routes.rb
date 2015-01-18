@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
+  resources :sessions, only: [:destroy]
+
+  match '/logout', to: 'sessions#destroy', via: 'delete'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
