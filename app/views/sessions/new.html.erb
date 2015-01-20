@@ -1,0 +1,7 @@
+<p> Please log in!</p>
+
+<%= form_for(:session, url: sessions_path, method: 'POST' ) do |f| %>
+  <%= f.text_field :email, :placeholder => "Email" %><br>
+  <%= f.password_field :password, :placeholder => "Password" %><br>
+  <%= f.submit "Log In", class: 'button' %>
+<% end %>
