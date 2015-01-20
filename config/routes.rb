@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
-  resources :sessions, only: [:destroy]
+  resources :sessions, only: [:create, :destroy]
 
+  match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'
 
   # Example of regular route:
