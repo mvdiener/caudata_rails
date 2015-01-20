@@ -12,6 +12,8 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
+  before_save { self.email = email.downcase }
+
   validates_format_of :email, with: VALID_EMAIL_REGEX
   validates_uniqueness_of :email
 

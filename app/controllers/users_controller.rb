@@ -4,10 +4,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    current_user
+  end
+
   def create
-    @user = User.new(user_params)
-    if @user.save
-      session[:current_user_id] = @user.id.to_s
+    user = User.new(user_params)
+    if user.save
+      session[:current_user_id] = user.id.to_s
       redirect_to root_path
     else
       render 'new'
