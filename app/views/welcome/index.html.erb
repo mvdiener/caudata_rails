@@ -1,15 +1,1 @@
 <p>Welcome to Venturebelt.com</p>
-
-<p>Start all gear</p>
-<% if @gear %>
-  <% @gear.each do |x| %>
-  <ol>
-    <li><%= x.category %></li>
-    <li><%= x.brand %></li>
-    <li><%= x.model %></li>
-    <li><%= x.year %></li>
-    <li><%= x.name %></li>
-  </ol>
-  <% end %>
-<% end %>
-<p>End all gear</p>
