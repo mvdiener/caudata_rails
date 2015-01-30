@@ -1,1 +1,7 @@
+<p><%= link_to 'Add new gear', new_gear_path %></p>
 <p>All my gear:</p>
+<% if @gear %>
+  <% @gear.each do |gear| %>
+    <p><%= gear.category %></p>
+  <% end %>
+<% end %>
