@@ -5,6 +5,8 @@ class User
   include Mongoid::Timestamps
   include ActiveModel::SecurePassword
 
+  embeds_many :gears
+
   before_save { self.email = email.downcase }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -14,7 +16,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
-  validates_presence_of :first_name, :last_name, :username, :password, :password_confirmation
+  validates_presence_of :first_name, :last_name, :username
 
   validates_format_of :email, with: VALID_EMAIL_REGEX
 
