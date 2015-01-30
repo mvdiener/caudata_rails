@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
+  resources :gears
   resources :sessions, only: [:create, :destroy]
 
   match '/login', to: 'sessions#new', via: 'get'
