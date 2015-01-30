@@ -19,6 +19,6 @@
 /config/secrets.yml
 
 # Ignore local database files
-/db
-/db/journal
-/db/journal/j._0
+/db/
+/db/journal/
+/db/journal/*._0
