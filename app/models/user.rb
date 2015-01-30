@@ -14,7 +14,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
-  validates_presence_of :first_name, :last_name, :username, :password
+  validates_presence_of :first_name, :last_name, :username, :password, :password_confirmation
 
   validates_format_of :email, with: VALID_EMAIL_REGEX
 
