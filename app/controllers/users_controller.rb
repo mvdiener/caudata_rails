@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     current_user
+    @gear = @current_user.gears
   end
 
   def create
