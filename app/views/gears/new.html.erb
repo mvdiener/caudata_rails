@@ -3,8 +3,8 @@
 <%= form_for(@gear) do |f| %>
   <%= f.text_field :category, :placeholder => "Category" %><br>
   <%= f.text_field :brand, :placeholder => "Brand" %><br>
-  <%= f.text_field :model, :placeholder => "Model" %><br>
   <%= f.number_field :year, :placeholder => "Year" %><br>
+  <%= f.text_field :model, :placeholder => "Model" %><br>
   <%= f.submit "Submit", class: 'button' %>
 <% end %>
 
