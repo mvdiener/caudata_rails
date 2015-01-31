@@ -2,6 +2,11 @@
 <p>All my gear:</p>
 <% if @gear %>
   <% @gear.each do |gear| %>
-    <p><%= gear.category %></p>
+    <p>
+      Category: <%= gear.category %><br>
+      Brand: <%= gear.brand %><br>
+      Year: <%= gear.year  %><br>
+      Model: <%= gear.model %><br>
+    </p>
   <% end %>
 <% end %>
