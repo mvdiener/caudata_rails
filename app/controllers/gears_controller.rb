@@ -14,7 +14,6 @@ class GearsController < ApplicationController
     if gear.valid?
       gear.save
       @current_user.gears << gear
-      @current_user.save
       redirect_to user_path(@current_user.id)
     else
       @errors = gear.errors
